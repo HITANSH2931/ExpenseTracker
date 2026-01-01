@@ -54,12 +54,12 @@ const Login = () => {
 
    const googleLogin = () =>{
 
-     window.location = "https://expense-tracker-latest-g1si.onrender.com/oauth2/authorization/google"
+     window.location = "https://expense-latest-1.onrender.com/oauth2/authorization/google"
    }
 
    const githubLogin = () =>{
 
-         window.location = "https://expense-tracker-latest-g1si.onrender.com/oauth2/authorization/github"
+         window.location = "https://expense-latest-1.onrender.com/oauth2/authorization/github"
 
     }  
 

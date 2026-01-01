@@ -1,2 +1,2 @@
- const baseUrl = "https://expense-tracker-latest-g1si.onrender.com"
+ const baseUrl = "https://expense-latest-1.onrender.com" 
  export default baseUrl;

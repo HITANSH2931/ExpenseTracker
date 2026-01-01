@@ -1,7 +1,7 @@
 import axios from 'axios';
 import { formatDate } from './Date-Convert/DateEnglish';
 
-const API_URL = "https://expense-tracker-latest-g1si.onrender.com"; 
+const API_URL = "https://expense-latest-1.onrender.com"; 
 
 export const getAllExpenses = async (token,dispatch,setAllExpenses) => {
     try {
