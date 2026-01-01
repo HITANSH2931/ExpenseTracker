@@ -22,6 +22,8 @@ const Income = () => {
    
   const[chartData,setChartData] = useState([...incomes].sort((a,b) => new Date(a.date) - new Date(b.date)));
 
+  const categories = useSelector((state) => state.auth.category)
+
   console.log(chartData);
 
   const deleteIncomeSource = async(i) =>{
@@ -71,6 +73,16 @@ const Income = () => {
       }
   }
 
+  const handleModal  = () =>{
+
+     if(categories.some((cat) => cat.type === "INCOME")) setModal(true);
+     else toast.warn("No Category of Type Income Created Yet",{
+                         className:'text-[14px] text-red-700 font-semibold rounded-lg'
+                     });
+
+      
+  }
+
 
   return (
     
@@ -86,7 +98,7 @@ const Income = () => {
         </div>
 
 
-         <button onClick={() =>setModal(true)} className='bg-green-100 hover:bg-green-200 text-green-800 rounded-lg px-3.5 py-1.5 text-[13px] flex items-center gap-1.5 font-bold'>
+         <button onClick={() => handleModal()} className='bg-green-100 hover:bg-green-200 text-green-800 rounded-lg px-3.5 py-1.5 text-[13px] flex items-center gap-1.5 font-bold'>
                <Plus className='w-4 h-4'/>Add Income</button>
     
         </div>

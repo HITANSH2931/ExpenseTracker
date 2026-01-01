@@ -21,6 +21,8 @@ const Expense = () => {
    
   const[chartData,setChartData] = useState([...expenses].sort((a,b) => new Date(a.date) - new Date(b.date)));
 
+  const categories = useSelector((state) => state.auth.category)
+
   const deleteExpenseSource = async(e) =>{
 
       console.log('hello');
@@ -59,6 +61,15 @@ const Expense = () => {
       }
   }
 
+  const handleModal = () =>{
+
+        if(categories.some((cat) => cat.type === "EXPENSE")) setModal(true);
+           else toast.warn("No Category of Type Expense Created Yet",{
+                               className:'text-[14px] text-red-700 font-semibold rounded-lg'
+                           });
+      
+  }
+
 
   return (
     
@@ -74,7 +85,7 @@ const Expense = () => {
         </div>
 
 
-         <button onClick={() =>setModal(true)} className='bg-red-100 hover:bg-red-200 text-red-800 rounded-lg px-3.5 py-1.5 text-[13px] flex items-center gap-1.5 font-bold'>
+         <button onClick={() => handleModal()} className='bg-red-100 hover:bg-red-200 text-red-800 rounded-lg px-3.5 py-1.5 text-[13px] flex items-center gap-1.5 font-bold'>
                <Plus className='w-4 h-4'/>Add Expense</button>
     
         </div>
