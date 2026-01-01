@@ -14,7 +14,7 @@ const OauthSuccess = () => {
 
      const token = searchParams.get("token");
      const email = searchParams.get("email");
-     const name = searchParams.get("name");
+     const username = searchParams.get("name");
      const message = searchParams.get("message");
 
     useEffect(() =>{
@@ -28,7 +28,7 @@ const OauthSuccess = () => {
 
         if(!message) {
         setTimeout(()=>navigate("/"),4000);
-        dispatch(login({token,email,name}));
+        dispatch(login({token,email,username}));
 
           getAllCategories(token,dispatch,setAllCateogries);
           getAllExpenses(token,dispatch,setAllExpenses);
