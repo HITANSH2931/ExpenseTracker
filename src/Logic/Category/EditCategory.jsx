@@ -57,6 +57,10 @@ const EditCategory = ({setEdit,value}) => {
        catch(error){
 
         console.log(error)
+          toast.warn("Category name already exists",{
+                              className:'text-[14px] text-gray-700 font-semibold rounded-lg'
+                          });
+        
       
        
        }

@@ -81,6 +81,9 @@ const EditIncomeModal = ({setEditModal,setChartData,i}) => {
         catch(error){
 
             console.log(error);
+            toast.info("Income already exists with same name",{
+                           className:'text-[14px] text-gray-700 font-semibold rounded-lg'
+                       }); 
          
         }
 

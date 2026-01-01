@@ -52,7 +52,7 @@ const OauthSuccess = () => {
            
           {message ? 
           
-             <h1 className='text-2xl font-bold text-center'>lLogin Failed Email Already Exists Redirecting...</h1> 
+             <h1 className='text-2xl font-bold text-center'>Login Failed Email Already Exists Redirecting...</h1> 
              
                 : 
 

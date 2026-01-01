@@ -58,6 +58,9 @@ const EditExpenseModal = ({setEditModal,setChartData,e}) => {
         catch(error){
 
             console.log(error);
+            toast.info("Expense already exists with same name",{
+                                        className:'text-[14px] text-gray-700 font-semibold rounded-lg'
+                                    });
            
         }
 
